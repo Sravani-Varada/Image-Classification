@@ -9,7 +9,7 @@ class_names = ['T-shirt/top', 'Trouser', 'Pullover', 'Dress', 'Coat',
                'Sandal', 'Shirt', 'Sneaker', 'Bag', 'Ankle boot']
 st.title("👗 Fashion MNIST Classifier")
 st.write("Upload a 28x28 grayscale image or a colored one (auto-converted)")
-uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png","webp"])
+uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
 if uploaded_file is not None:
     image = Image.open(uploaded_file).convert('L')  # Convert to grayscale
     image = ImageOps.invert(image)  # Because Fashion MNIST is white on black
